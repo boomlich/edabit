@@ -16,19 +16,19 @@ public class Main {
     }
 
     public static int battleOutcome(int battleNumber) {
-        char[] temp = String.valueOf(battleNumber).toCharArray();
+        char[] digits = String.valueOf(battleNumber).toCharArray();
 
         // Check adjacent digits to find which is larges of the two
         String winners = "";
-        for (int i = 0; i < temp.length-1; i += 2) {
-            int numA = Character.getNumericValue(temp[i]);
-            int numB = Character.getNumericValue(temp[i+1]);
+        for (int i = 0; i < digits.length-1; i += 2) {
+            int numA = Character.getNumericValue(digits[i]);
+            int numB = Character.getNumericValue(digits[i+1]);
             winners += compareNumbers(numA, numB);
         }
 
         // If odd length, add last digit
-        if (temp.length % 2 == 1) {
-            winners += String.valueOf(temp[temp.length-1]);
+        if (digits.length % 2 == 1) {
+            winners += String.valueOf(digits[digits.length-1]);
         }
 
         return Integer.parseInt(winners);
