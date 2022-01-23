@@ -1,9 +1,18 @@
+/*
+Solution for the following coding challenge:
+https://edabit.com/challenge/42DtofyzmZXjWXCtw
+ */
+
 package DigitsBattle;
 
 public class Main {
     public static void main(String[] args) {
 
+        // Example 1
         System.out.println(battleOutcome(93552129));
+
+        // Example 2
+        System.out.println(battleOutcome(3245196));
     }
 
     public static int battleOutcome(int battleNumber) {
